@@ -36,7 +36,7 @@ function calculateRectangleArea(){
 
     // validation input: width and length
     if(isNaN(width) || isNaN(length)){
-        alert('Please insert a number');
+        alert('Please insert number');
         return;
     }
 
@@ -52,6 +52,7 @@ function calculateRectangleArea(){
 }
 
 // reusable function --> reduce duplicate code
+// calculate Parallelogram Area
 function calculateParallelogramArea(){
     const base = getInputValue('parallelogram-base');
     const height = getInputValue('parallelogram-height');
@@ -66,12 +67,48 @@ function calculateParallelogramArea(){
     // add to calculation entry
     addToCalculationEntry('Parallelogram', area)
 }
+// calculate Rhombus area
+function calculateRhombusArea(){
+    const diagonal1 = getInputValue('rhombus-diagonal1');
+    const diagonal2 = getInputValue('rhombus-diagonal2');
+    // validate
+    if(isNaN(diagonal1) || isNaN(diagonal2)){
+        alert('Please insert number')
+        return;
+    }
+    const area = 0.5 * diagonal1 * diagonal2;
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('rhombus-area', areaTwoDecimal);
 
+    addToCalculationEntry('Rhombus', areaTwoDecimal);
+}
+// calculate Pentagon Area
+function calculatePentagonArea(){
+    const perimeter = getInputValue('pentagon-perimeter');
+    const apothem = getInputValue('pentagon-apothem');
+    // validate
+    if(isNaN(perimeter) || isNaN(apothem)){
+        alert('Please insert number')
+        return;
+    }
+    const area = 0.5 * perimeter * apothem;
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('pentagon-area', areaTwoDecimal);
+
+    addToCalculationEntry('Pentagon', areaTwoDecimal);
+
+}
+
+// calculate Ellipse Area
 function calculateEllipseArea(){
     const majorRadius = getInputValue('ellipse-major-radius');
     const minorRadius = getInputValue('ellipse-minor-radius');
+    if(isNaN(majorRadius) || isNaN(minorRadius)){
+        alert('Please insert number')
+        return;
+    }
     const area = 3.14 * majorRadius * minorRadius;
-    const areaTwoDecimal = area.toFixed(2)
+    const areaTwoDecimal = area.toFixed(2);
     setElementInnerText('ellipse-area', areaTwoDecimal);
 
     addToCalculationEntry('Ellipse', areaTwoDecimal)

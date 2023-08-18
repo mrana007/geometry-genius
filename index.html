@@ -73,41 +73,41 @@
                   </div>
                 </div>
               </div>
-            <!-- Pentagon card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/pentagon.png" alt="pentagon" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Pentagon</h2>
-                  <p>Area (A) = 0.5 X p X b</p>
-                  <p>
-                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="large" name="" id="">
-                    <span class="ml-2">cm</span>
-                    <!-- ellipse height -->
-                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="short" name="" id="">
-                    <span class="ml-2">cm</span>
-                  </p>
-                  <p class="text-2xl">Area: <span class="font-bold" id="">0</span> cm<sup>2</sup></p>
-                  <div class="card-actions">
-                    <button onclick="" class="btn btn-primary w-full mt-1">CalCulate</button>
-                  </div>
-                </div>
-              </div>
-            <!-- Rhombus card -->
+              <!-- Rhombus card -->
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure><img src="/images/rhombus.png" alt="rhombus" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Rhombus</h2>
                   <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                   <p>
-                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="large" name="" id="">
+                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="d1" name="" id="rhombus-diagonal1">
                     <span class="ml-2">cm</span>
-                    <!-- ellipse height -->
-                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="short" name="" id="">
+                    <!-- Rhombus diagonal2 -->
+                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="d2" name="" id="rhombus-diagonal2">
                     <span class="ml-2">cm</span>
                   </p>
-                  <p class="text-2xl">Area: <span class="font-bold" id="">0</span> cm<sup>2</sup></p>
+                  <p class="text-2xl">Area: <span class="font-bold" id="rhombus-area">0</span> cm<sup>2</sup></p>
                   <div class="card-actions">
-                    <button onclick="" class="btn btn-primary w-full mt-1">CalCulate</button>
+                    <button onclick="calculateRhombusArea()" class="btn btn-primary w-full mt-1">CalCulate</button>
+                  </div>
+                </div>
+              </div>
+            <!-- Pentagon card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="/images/pentagon.png" alt="pentagon" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Pentagon</h2>
+                  <p>Area (A) = 0.5 X p X a</p>
+                  <p>
+                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="p" name="" id="pentagon-perimeter">
+                    <span class="ml-2">cm</span>
+                    <!-- pentagon apothem -->
+                    <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="a" name="" id="pentagon-apothem">
+                    <span class="ml-2">cm</span>
+                  </p>
+                  <p class="text-2xl">Area: <span class="font-bold" id="pentagon-area">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions">
+                    <button onclick="calculatePentagonArea()" class="btn btn-primary w-full mt-1">CalCulate</button>
                   </div>
                 </div>
               </div>
