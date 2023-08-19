@@ -103,6 +103,7 @@ function calculatePentagonArea(){
 function calculateEllipseArea(){
     const majorRadius = getInputValue('ellipse-major-radius');
     const minorRadius = getInputValue('ellipse-minor-radius');
+    // validate
     if(isNaN(majorRadius) || isNaN(minorRadius)){
         alert('Please insert number')
         return;
@@ -115,7 +116,7 @@ function calculateEllipseArea(){
 }
 
 
-// reusable get input value field in number
+// reusable get input value field in number(parent function)
 function getInputValue(fieldId){
     const inputField = document.getElementById(fieldId);
     const inputValueText = inputField.value;

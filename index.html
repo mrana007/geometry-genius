@@ -10,15 +10,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+        <div class="navbar bg-blue-200">
+            <div class="flex-1">
+              <h1>Interactive</h1> 
+              <p>Geometry Genius</p>
+            </div>
+            <div class="flex-none">
+              <button class="btn btn-primary bg-blue-600 w-32">Blog</button>
+            </div>
+          </div>
+    </header>
       <main class="mt-4">
         <!-- Main Container -->
         <div class="flex flex-col lg:flex-row">
           <!-- shape container -->
           <div class="flex-1 grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Triangle card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/triangle.png" alt="triangle" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/triangle.png" alt="triangle" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Triangle</h2>
                   <p>Area (A) = 0.5 X b X h</p>
@@ -36,8 +46,8 @@
                 </div>
               </div>
             <!-- Rectangle card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/rectangle.png" alt="rectangle" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/rectangle.png" alt="rectangle" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Rectangle</h2>
                   <p>Area (A) = w X l</p>
@@ -55,8 +65,8 @@
                 </div>
               </div>
             <!-- parallelogram card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/parallelogram.png" alt="parallelogram" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/parallelogram.png" alt="parallelogram" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Parallelogram</h2>
                   <p>Area (A) = b X h</p>
@@ -74,8 +84,8 @@
                 </div>
               </div>
               <!-- Rhombus card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/rhombus.png" alt="rhombus" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/rhombus.png" alt="rhombus" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Rhombus</h2>
                   <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
@@ -93,8 +103,8 @@
                 </div>
               </div>
             <!-- Pentagon card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/pentagon.png" alt="pentagon" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/pentagon.png" alt="pentagon" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Pentagon</h2>
                   <p>Area (A) = 0.5 X p X a</p>
@@ -112,8 +122,8 @@
                 </div>
               </div>
             <!-- Ellipse card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/ellipse.png" alt="ellipse" /></figure>
+            <div class="card w-96 bg-base-100 shadow-xl pt-4">
+                <figure><img src="./images/ellipse.png" alt="ellipse" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">Ellipse</h2>
                   <p>Area (A) = 𝛑 ab</p>
@@ -132,8 +142,8 @@
               </div>
           </div>
           <!-- area container -->
-          <div class="w-[400px]">
-            <div class="text-4xl">Area Calculator</div>
+          <div class=" border-2 w-[400px] h-[460px] items-center">
+            <div class="text-4xl justify-center">Area Calculator</div>
             <div id="calculation-entry">
                 
             </div>
